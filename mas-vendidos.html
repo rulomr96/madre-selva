@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mueblería Madre Selva - Más Vendidos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos específicos para la página Más Vendidos */
+        .page-title {
+            text-align: center;
+            color: #2c5530;
+            margin: 30px 0;
+            font-size: 2.5rem;
+            border-bottom: 2px solid #4a7c59;
+            padding-bottom: 15px;
+        }
+        
+        .grid-mas-vendidos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .card-producto {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid #e0e0e0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .card-producto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .imagen-producto-mv {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .img-producto {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .card-producto:hover .img-producto {
+            transform: scale(1.05);
+        }
+        
+        .info-producto-mv {
+            padding: 20px;
+        }
+        
+        .info-producto-mv h3 {
+            color: #2c5530;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .info-producto-mv p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        .precio-mv {
+            color: #e74c3c;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        /* Responsive para la página de más vendidos */
+        @media (max-width: 1024px) {
+            .grid-mas-vendidos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .grid-mas-vendidos {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <header class="navbar">
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Muebles</a></li>
+                <li><a href="#">Promociones</a></li>
+                <li><a href="mas-vendidos.html" class="active">Más Vendidos</a></li>
+                <li><a href="#">Reparación</a></li>
+                <li><a href="#">Sucursales</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">Productos Más Vendidos</h1>
+        
+        <div class="grid-mas-vendidos">
+            <!-- Producto 1 -->
+            <div class="card-producto">
+                <div class="imagen-producto-mv">
+                    <img src="img/sala.jpg" alt="Sofá Moderna Comfort" class="img-producto">
+                </div>
+                <div class="info-producto-mv">
+                    <h3>Sofá Moderna Comfort</h3>
+                    <p>Sofá de 3 plazas con tejido en hilo. Marco de madera resistente. Opción elegante y cómoda para tu sala.</p>
+                    <div class="precio-mv">$18,900 MXN</div>
+                    <button class="btn">Ver Detalles</button>
+                </div>
+            </div>
+            
+            <!-- Producto 2 -->
+            <div class="card-producto">
+                <div class="imagen-producto-mv">
+                    <img src="img/comedor.jpg" alt="Mesa de Comedor Rustic" class="img-producto">
+                </div>
+                <div class="info-producto-mv">
+                    <h3>Mesa de Comedor Rustic</h3>
+                    <p>Mesa comedor en madera de pino maciza con acabado natural. Capacidad para 6 personas, perfecta para reuniones familiares.</p>
+                    <div class="precio-mv">$18,900 MXN</div>
+                    <button class="btn">Ver Detalles</button>
+                </div>
+            </div>
+            
+            <!-- Producto 3 -->
+            <div class="card-producto">
+                <div class="imagen-producto-mv">
+                    <img src="img/comoda.jpg" alt="Cómoda Heritage" class="img-producto">
+                </div>
+                <div class="info-producto-mv">
+                    <h3>Cómoda Heritage</h3>
+                    <p>Cómoda de 6 cajones en madera de cedro con herrajes antiguos. Diseño clásico inspirado en muebles tradicionales mexicanos.</p>
+                    <div class="precio-mv">$9,800 MXN</div>
+                    <button class="btn">Ver Detalles</button>
+                </div>
+            </div>
+            
+            <!-- Producto 4 -->
+            <div class="card-producto">
+                <div class="imagen-producto-mv">
+                    <img src="img/sillon}.jpg" alt="Sillón Individual Relax" class="img-producto">
+                </div>
+                <div class="info-producto-mv">
+                    <h3>Sillón Individual</h3>
+                    <p>Sillón individual ergonómico con respaldo alto y reposabrazos acolchados. Ideal para espacios de lectura y relajación.</p>
+                    <div class="precio-mv">$8,500 MXN</div>
+                    <button class="btn">Ver Detalles</button>
+                </div>
+            </div>
+            
+            <!-- Producto 5 -->
+            <div class="card-producto">
+                <div class="imagen-producto-mv">
+                    <img src="img/escritorio.jpg" alt="Cama King Size" class="img-producto">
+                </div>
+                <div class="info-producto-mv">
+                    <h3>Escritorio Executive</h3>
+                    <p>Escritorio ejecutivo con cubierta de nogal y cajones con sistema de cierre suave. Incluye pasacables integrado y amplio espacio de trabajo.
+
+</p>
+                    <div class="precio-mv">$15,200 MXN</div>
+                    <button class="btn">Ver Detalles</button>
+                </div>
+            </div>
+            
+            <!-- Producto 6 -->
+            <div class="card-producto">
+                <div class="imagen-producto-mv">
+                    <img src="img/librero.jpg" alt="Estantería Modular" class="img-producto">
+                </div>
+                <div class="info-producto-mv">
+                    <h3>Libreria</h3>
+                    <p>Librero modular de 5 repisas en madera de encino. Sistema ajustable que permite personalizar la altura de cada nivel según tus necesidades.</p>
+                    <div class="precio-mv">$7,600 MXN</div>
+                    <button class="btn">Ver Detalles</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Misma sección de información de contacto -->
+        <div class="info-footer">
+            <div class="info-col">
+                <h3>Ubicación</h3>
+                <p>Av. Principal 1234</p>
+                <p>Colonia Centro</p>
+                <p>Ciudad de México, 06600</p>
+                <p>+52 (55) 1234-5678</p>
+            </div>
+            
+            <div class="info-col">
+                <h3>Contacto</h3>
+                <p>Av. Principal 1234</p>
+                <p>Colonia Centro</p>
+                <p>Ciudad de México, 06600</p>
+                <p>+52 (55) 1234-5678</p>
+            </div>
+            
+            <div class="info-col">
+                <h3>Síguenos</h3>
+                <div class="redes-sociales">
+                    <a href="#" class="red-social">Facebook</a>
+                    <a href="#" class="red-social">Instagram</a>
+                    <a href="#" class="red-social">Twitter</a>
+                    <a href="#" class="red-social">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Script básico para interactividad
+        document.addEventListener('DOMContentLoaded', function() {
+            // Efecto hover en botones
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                    this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = 'none';
+                });
+            });
+            
+            // Navegación activa
+            const currentPage = window.location.pathname.split('/').pop();
+            const navLinks = document.querySelectorAll('.nav-menu a');
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
